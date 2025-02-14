@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia dos Namorados - Desafio de Amor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#desafio">Desafio</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção Início -->
+    <section id="inicio" class="section active">
+        <div class="container">
+            <h1>💖 Desafio de Amor 💖</h1>
+            <p>Responda às perguntas e prove que conhece cada detalhe sobre mim!</p>
+            <button onclick="scrollToSection('desafio')">Começar o Desafio</button>
+        </div>
+    </section>
+
+    <!-- Seção Desafio -->
+    <section id="desafio" class="section">
+        <div class="container">
+            <h2> DESAFIO </h2>
+            <div id="quiz"></div>
+            <button id="submit">Verificar Respostas</button>
+            <p id="result"></p>
+        </div>
+    </section>
+
+    <!-- Seção Galeria -->
+    <section id="galeria" class="section">
+        <div class="container">
+            <h2>📸 Fotos do Narigudo</h2>
+            <p>Aqui estão algumas fotos do narigudo.</p>
+            <div class="gallery">
+                <img src="imagens/img1.jpeg" alt="Foto 1">
+                <img src="imagens/img2.jpeg" alt="Foto 2">
+                <img src="imagens/img3.jpeg" alt="Foto 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2>💕 Sobre</h2>
+            <p>Este site foi criado correndo, antes de ir pra sua casa, qualquer defeito é culpa sua.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

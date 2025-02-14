@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabéns, Meu Amor!</title>
+    <link rel="stylesheet" href="style-parabens.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Efeito de Partículas -->
+    <div id="particles-js"></div>
+
+    <!-- Tela de Abertura -->
+    <div id="abertura" class="abertura">
+        <div class="mensagem">
+            <h1>Bem-vinda ao nosso mundo...</h1>
+            <p>Antes de prosseguir, confirme que é você.</p>
+            <form id="form-confirmacao" onsubmit="confirmarUsuario(event)">
+                <input type="text" id="nome" placeholder="Seu nome" required>
+                <input type="number" id="idade" placeholder="Sua idade" required>
+                <input type="date" id="data-namoro" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <audio id="background-music" loop muted>
+                <source src="imagens/music.mp3" type="audio/mpeg">
+                <source src="imagens/music.ogg" type="audio/ogg">
+                <source src="imagens/music.wav" type="audio/wav">
+                Seu navegador não suporta áudio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal (escondido inicialmente) -->
+    <div id="conteudo-principal" class="conteudo-principal">
+        <!-- Menu de Navegação -->
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#relogio">Nosso Tempo</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#declaracao">Declaração</a></li>
+            </ul>
+        </nav>
+
+        <!-- Seção Início -->
+        <section id="inicio" class="section">
+            <div class="container">
+                <h1> Parabéns, Meu Amor! </h1>
+                <p>Você conseguiu acertar todas as respostas.</p>
+                <button onclick="scrollToSection('relogio')">Ver Nosso Tempo</button>
+            </div>
+        </section>
+
+        <!-- Seção Relógio -->
+        <section id="relogio" class="section">
+            <div class="container">
+                <h2>⏳ Nosso Tempo Juntos ⏳</h2>
+                <div id="timer">
+                    <div><span id="anos">0</span><br>Anos</div>
+                    <div><span id="meses">0</span><br>Meses</div>
+                    <div><span id="dias">0</span><br>Dias</div>
+                    <div><span id="horas">0</span><br>Horas</div>
+                    <div><span id="minutos">0</span><br>Minutos</div>
+                    <div><span id="segundos">0</span><br>Segundos</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Galeria -->
+        <section id="galeria" class="section">
+            <div class="container">
+                <h2> Nossa Galeria</h2>
+                <p>Aqui estão alguns dos nossos melhores momentos juntos.</p>
+                <div class="carrossel">
+                    <button class="carrossel-btn prev" onclick="moverCarrossel(-1)">&#10094;</button>
+                    <div class="carrossel-container">
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (1).jpeg" alt="Foto 1">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (10).jpeg" alt="Foto 2">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (11).jpeg" alt="Foto 3">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (12).jpeg" alt="Foto 4">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (13).jpeg" alt="Foto 5">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (14).jpeg" alt="Foto 6">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (15).jpeg" alt="Foto 7">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (2).jpeg" alt="Foto 8">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (3).jpeg" alt="Foto 9">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (4).jpeg" alt="Foto 10">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (5).jpeg" alt="Foto 11">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (6).jpeg" alt="Foto 12">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (7).jpeg" alt="Foto 13">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (8).jpeg" alt="Foto 14">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="imagens/img1 (9).jpeg" alt="Foto 15">
+                        </div>
+                    </div>
+                    <button class="carrossel-btn next" onclick="moverCarrossel(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+        <!-- Seção Declaração -->
+        <section id="declaracao" class="section">
+            <div class="container">
+                <h2> Minha Declaração </h2>
+                <div class="declaracao-texto">
+                    <p>
+                        Meu amor,<br>
+                        Estou escrevendo agora esta segunda carta. Você deve estar se perguntando: como assim, segunda carta? Você já vai entender…
+
+                        Desta vez, quero me expressar de uma forma diferente. Primeiro, preciso dizer que você é simplesmente a mulher da minha vida, minha garota, minha princesa, meu amor. Quero agradecer por tudo o que você faz por mim—pelo carinho, pelos cuidados, até mesmo por me alimentar. Você me faz feliz, me faz bem. Eu não seria nada sem você, sabia?
+
+                        Sei que você pensa muitas coisas, assim como eu, mas hoje é um momento especial, um momento apenas para sermos felizes. E nós somos felizes! Em grande parte da nossa vida juntos, estamos sendo felizes, e continuaremos assim para sempre.
+
+                        Obrigado, meu amor. Estas palavras são simples, mas vêm do coração, sem preparo. Então, apenas uma frase:
+
+                        Eu te amo muito, meu amor.<br>
+                        Com todo o meu amor,<br>
+                        <span class="assinatura">Pedro Narigudo</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>© 2025 - Todos os direitos reservados à <span class="destaque">Jullia Luciana da Silva Santos</span>.</p>
+                <p class="brincadeira">Porque ela é minha dona, meu amor, minha vida, e eu sou só o Pedro Narigudo que tenta fazer ela feliz todos os dias! ❤️</p>
+                <p class="assinatura-footer">Com todo o meu amor,<br><span class="assinatura">Pedro Narigudo</span></p>
+            </div>
+        </footer>
+
+
+    <script src="script-parabens.js"></script>
+    <script>
+        // Carregar partículas
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js loaded - callback');
+        });
+    </script>
+</body>
+</html>
